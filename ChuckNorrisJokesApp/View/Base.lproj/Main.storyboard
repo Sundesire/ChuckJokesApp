@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q8l-IT-J4F">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Jokes-->
+        <scene sceneID="Gmq-Fe-tgM">
+            <objects>
+                <tableViewController id="toG-dK-i8r" customClass="MainTableViewController" customModule="ChuckNorrisJokesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ICe-fT-Zil">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="nSH-sK-4h2">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nSH-sK-4h2" id="MOj-cL-6B6">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="toG-dK-i8r" id="uYx-7y-Gtw"/>
+                            <outlet property="delegate" destination="toG-dK-i8r" id="Nfj-Qq-Wrp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Jokes" id="7rA-Fm-Av5"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j7g-Nr-MdQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="-296"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="5l4-as-uCV">
+            <objects>
+                <viewController id="mxO-US-c2f" customClass="WebViewController" customModule="ChuckNorrisJokesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QQE-OC-XUA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CAz-MN-foA">
+                                <rect key="frame" x="0.0" y="88" width="414" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="CAz-MN-foA" firstAttribute="leading" secondItem="QQE-OC-XUA" secondAttribute="leading" id="WdP-y5-we5"/>
+                            <constraint firstItem="CAz-MN-foA" firstAttribute="top" secondItem="iNT-9S-ZR4" secondAttribute="top" id="aXu-eN-0SA"/>
+                            <constraint firstAttribute="trailing" secondItem="CAz-MN-foA" secondAttribute="trailing" id="rCw-Og-n5D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iNT-9S-ZR4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0hE-35-LI7"/>
+                    <connections>
+                        <outlet property="progressView" destination="CAz-MN-foA" id="s2T-wd-Vbu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dDS-Se-uxK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947.82608695652186" y="414.50892857142856"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="lRW-fM-2Fi">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Q8l-IT-J4F" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4cS-Ux-QH2">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="CX2-y4-ld2" kind="relationship" relationship="viewControllers" id="h9D-7R-hVS"/>
+                        <segue destination="7Sa-1q-XYi" kind="relationship" relationship="viewControllers" id="ohf-gt-MZr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CkU-1v-Wgj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-935" y="89"/>
+        </scene>
+        <!--Jokes-->
+        <scene sceneID="p7h-bk-AH6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CX2-y4-ld2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Jokes" id="x4k-bH-qzy"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f7p-eH-dNV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="toG-dK-i8r" kind="relationship" relationship="rootViewController" id="Vcd-Bp-3Ni"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uup-Pe-J32" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38" y="-296"/>
+        </scene>
+        <!--API-->
+        <scene sceneID="XOa-RA-F10">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Sa-1q-XYi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="API" id="bgO-N9-thn"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ot1-27-8KH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mxO-US-c2f" kind="relationship" relationship="rootViewController" id="IZn-dH-CjE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Zl-XX-1Iw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38" y="415"/>
+        </scene>
+    </scenes>
+</document>
